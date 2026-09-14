@@ -1,4 +1,5 @@
 ﻿import Navigator from "../routes/Navigation.jsx"
+import DisplayEvents from "../Display_Events.jsx"
 import React, { useState } from 'react';
 
 function Dashboard() {
@@ -54,10 +55,14 @@ function Dashboard() {
 
 
     const Calender =
-        <h1>CALENDAR</h1>
+        <>
+            <h1>CALENDAR</h1>
+            <DisplayEvents/>
+        </>
     
     const NoCalendar =
-    <h1>No Calendar</h1>
+        <h1></h1>
+        
 
     return (
         <>

@@ -23,10 +23,14 @@ function AddEvent() {
             <input type="text" id="Description" /><br />
             <label name="EventLocation">Location</label> <br />
             <input type="text" id="EventLocation" /><br />
-            <button type="button" onClick={AddEvent}> Log In</button>
+            <button type="button" onClick={AddEvent}>Add Event</button>
         </>
 
-    let events = []
+    let events = JSON.parse(localStorage.getItem("Events"));
+
+    if (events === null) {
+        events = [];
+    }
 
     function AddEvent() {
         let NewEvent = new Event(EventName.value, EventDate.value, EventTime.value, Description.value, EventLocation.value)
